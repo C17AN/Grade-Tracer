@@ -1,13 +1,35 @@
 const express = require("express");
-const crawler = require("./src/Crawler");
+const { crawler } = require("./src/Crawler");
 const app = express();
 
 let subject = [];
-const func = async () => {
-  await crawler.crawler();
-  subject = [...crawler.data];
+const init = async () => {
+  crawler().then((data) => {
+    subject = [...data];
+  });
 };
-func();
+
+const checkGradeChange = () => {
+  setInterval(async () => {
+    crawler().then((data) => {
+      // console.log(subject.length);
+      // console.log("--- subject ---");
+      // console.log(subject);
+      // console.log("--- data ---");
+      // console.log(data);
+      for (let i = 0; i < subject.length; i++) {
+        if (data[i].grade !== subject[i].grade) {
+          console.log("성적이 변동되었습니다!");
+          subject = [...data];
+        }
+      }
+    });
+  }, 5000);
+};
+
+init();
+checkGradeChange();
+
 app.get("/", (req, res) => {
   console.log(subject);
   res.send(subject);
