@@ -17,6 +17,7 @@ const checkGradeChange = () => {
       // console.log(subject);
       // console.log("--- data ---");
       // console.log(data);
+      console.log("updating...");
       for (let i = 0; i < subject.length; i++) {
         if (data[i].grade !== subject[i].grade) {
           console.log("성적이 변동되었습니다!");
@@ -24,7 +25,7 @@ const checkGradeChange = () => {
         }
       }
     });
-  }, 5000);
+  }, 10000);
 };
 
 init();
