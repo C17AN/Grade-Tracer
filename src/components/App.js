@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Subject from "./Subject";
+import "./App.css";
 
 class App extends Component {
   constructor(props) {
@@ -16,13 +17,22 @@ class App extends Component {
         {isLoading ? (
           <div>Loading</div>
         ) : (
-          data.map((subject, index) => (
-            <Subject
-              name={subject.name}
-              grade={subject.grade}
-              key={index}
-            ></Subject>
-          ))
+          <>
+            <header>항공대 성적변동 알람앱</header>
+            <section class="grade-table">
+              <article class="grade-header">
+                <div>과목명</div>
+                <div>성 적</div>
+              </article>
+              {data.map((subject, index) => (
+                <Subject
+                  name={subject.name}
+                  grade={subject.grade}
+                  key={index}
+                ></Subject>
+              ))}
+            </section>
+          </>
         )}
       </>
     );
