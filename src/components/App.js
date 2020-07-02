@@ -9,6 +9,7 @@ class App extends Component {
       isLoading: true,
       data: [],
     };
+    this.fetchData = this.fetchData.bind(this);
   }
   render() {
     const { isLoading, data } = this.state;
@@ -18,7 +19,10 @@ class App extends Component {
           <div>Loading</div>
         ) : (
           <>
-            <header>항공대 성적변동 알람앱</header>
+            <header>
+              <div class="header-title">항공대 성적변동 알람앱</div>
+              <div id="logo">LOGO</div>
+            </header>
             <section class="grade-table">
               <article class="grade-header">
                 <div>과목명</div>
@@ -38,21 +42,26 @@ class App extends Component {
     );
   }
 
+  fetchData() {
+    console.log("인터벌체크 1");
+    fetch("http://localhost:5000/")
+      .then((res) => {
+        console.log(res);
+        return res.json();
+      })
+      .then((data) => this.setState({ data: data, isLoading: false }));
+    return this.fetchData;
+  }
+
   componentDidMount() {
-    setInterval(() => {
-      console.log("인터벌체크 1");
-      fetch("http://localhost:5000/")
-        .then((res) => {
-          console.log(res);
-          return res.json();
-        })
-        .then((data) => this.setState({ data: data, isLoading: false }));
-    }, 10000);
+    // setInterval 함수의 콜백이 "최초 1회 실행된 후"
+    // 주기적으로 실행되기 위한 코드
+    setInterval(this.fetchData(), 60000);
   }
 
   componentDidUpdate() {
     console.log("--update--");
-    console.log(this.state.isLoading);
+    console.log("성적 업데이트!!");
     this.render();
   }
 }

@@ -8,3 +8,13 @@ header {
   justify-content: center;
   align-items: center;
 }
+
+.subject-name {
+  display: inline-block;
+  margin: 0px 20px;
+}
+
+.subject-grade {
+  display: inline-block;
+  margin: 0px 20px;
+}

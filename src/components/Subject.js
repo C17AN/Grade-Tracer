@@ -6,10 +6,10 @@ const Subject = ({ name, grade }) => {
     grade = "-";
   }
   return (
-    <div class="contents">
-      <span>{name}</span>
-      <span>{grade}</span>
-    </div>
+    <li class="contents">
+      <div class="subject-name">{name}</div>
+      <div class="subject-grade">{grade}</div>
+    </li>
   );
 };
 
