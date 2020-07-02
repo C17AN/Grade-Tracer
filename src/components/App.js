@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Subject from "./Subject";
+import Clock from "./Clock";
 import "./App.css";
 
 class App extends Component {
@@ -35,6 +36,7 @@ class App extends Component {
                 ></Subject>
               ))}
             </section>
+            <Clock />
           </>
         )}
       </>
@@ -42,7 +44,7 @@ class App extends Component {
   }
 
   fetchData() {
-    console.log("인터벌체크 1");
+    console.log("데이터 갱신");
     fetch("http://localhost:5000/")
       .then((res) => {
         console.log(res);
