@@ -4,17 +4,18 @@ header {
 
 .contents {
   display: flex;
+  flex-direction: row;
+  width: 100%;
   font-family: "NanumBarunGothic", Arial, Helvetica, sans-serif;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  margin: 5px 0px;
 }
 
 .subject-name {
-  display: inline-block;
   margin: 0px 20px;
 }
 
 .subject-grade {
-  display: inline-block;
-  margin: 0px 20px;
+  margin-right: 60px;
 }

@@ -32,13 +32,15 @@ header {
 
 .grade-header {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
   flex-direction: row;
   font-size: 20px;
 }
 
 .grade-header div {
   font-weight: bold;
-  margin: 15px 25px;
+  margin: 15px 50px;
 }
 
 .grade-table {

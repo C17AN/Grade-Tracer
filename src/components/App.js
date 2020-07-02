@@ -20,11 +20,10 @@ class App extends Component {
         ) : (
           <>
             <header>
-              <div class="header-title">항공대 성적변동 알람앱</div>
-              <div id="logo">LOGO</div>
+              <div className="header-title">항공대 성적변동 알람앱</div>
             </header>
-            <section class="grade-table">
-              <article class="grade-header">
+            <section className="grade-table">
+              <article className="grade-header">
                 <div>과목명</div>
                 <div>성 적</div>
               </article>

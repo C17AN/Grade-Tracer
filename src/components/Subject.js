@@ -6,9 +6,9 @@ const Subject = ({ name, grade }) => {
     grade = "-";
   }
   return (
-    <li class="contents">
-      <div class="subject-name">{name}</div>
-      <div class="subject-grade">{grade}</div>
+    <li className="contents">
+      <div className="subject-name">{name}</div>
+      <div className="subject-grade">{grade}</div>
     </li>
   );
 };
