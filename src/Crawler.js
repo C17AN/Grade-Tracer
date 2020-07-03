@@ -47,12 +47,14 @@ const getSubjectGrade = async (page) => {
 };
 
 const Crawler = async () => {
+  console.log("puppeteer launch check");
   const browser = await puppeteer.launch({
     headless: true,
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
   const page = await browser.newPage();
   await page.setDefaultNavigationTimeout(0);
+  console.log("page open check");
   await page.goto(
     "https://www.kau.ac.kr/page/login.jsp?ppage=&target_page=act_Portal_Check.jsp@chk1-1",
     { waitUntil: "networkidle2" }
