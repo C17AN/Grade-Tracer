@@ -55,6 +55,9 @@ const Crawler = async () => {
   const page = await browser.newPage();
   await page.setDefaultNavigationTimeout(0);
   console.log("page open check");
+  await page.setUserAgent(
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3419.0 Safari/537.36"
+  );
   await page.goto(
     "https://www.kau.ac.kr/page/login.jsp?ppage=&target_page=act_Portal_Check.jsp@chk1-1",
     { waitUntil: "networkidle2" }
