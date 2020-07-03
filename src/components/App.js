@@ -60,11 +60,7 @@ class App extends Component {
     setInterval(this.fetchData(), 60000);
   }
 
-  componentDidUpdate() {
-    console.log("--update--");
-    console.log("성적 업데이트!!");
-    this.render();
-  }
+  componentDidUpdate() {}
 }
 
 export default App;
