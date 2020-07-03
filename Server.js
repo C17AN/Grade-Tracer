@@ -34,7 +34,7 @@ init();
 checkGradeChange();
 
 app.get("/api/grade", (req, res) => {
-  console.log(subject);
+  console.log("subject", subject);
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
   res.send(subject);
