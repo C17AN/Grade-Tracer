@@ -52,6 +52,7 @@ const Crawler = async () => {
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
   const page = await browser.newPage();
+  await page.setDefaultNavigationTimeout(0);
   await page.goto(
     "https://www.kau.ac.kr/page/login.jsp?ppage=&target_page=act_Portal_Check.jsp@chk1-1",
     { waitUntil: "networkidle2" }
