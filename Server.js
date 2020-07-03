@@ -35,6 +35,7 @@ checkGradeChange();
 
 app.get("/", (req, res) => {
   console.log(subject);
+  res.header("Access-Control-Allow-Origin", "*");
   res.send(subject);
 });
 app.listen(5000, () => console.log(`server running at ${port}`));
