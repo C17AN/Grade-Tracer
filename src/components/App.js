@@ -46,7 +46,7 @@ class App extends Component {
   fetchData() {
     console.log("데이터 갱신");
     //fetch("https://kau-grade-checker.herokuapp.com/")
-    fetch("/grade")
+    fetch("/")
       .then((res) => {
         return res.json();
       })
