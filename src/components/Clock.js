@@ -30,7 +30,7 @@ export default class Clock extends Component {
   render() {
     return (
       <div className="container">
-        <div className="message">{`다음 갱신 시간은 ${this.state.second} 초 입니다.`}</div>
+        <div className="message">{`다음 갱신 시간은 ${this.state.second}초 후입니다.`}</div>
       </div>
     );
   }

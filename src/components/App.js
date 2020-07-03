@@ -48,7 +48,6 @@ class App extends Component {
     //fetch("https://kau-grade-checker.herokuapp.com/")
     fetch("http://localhost:5000/")
       .then((res) => {
-        console.log(res);
         return res.json();
       })
       .then((data) => this.setState({ data: data, isLoading: false }));
