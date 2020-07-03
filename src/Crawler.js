@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer");
 //import puppeteer from "puppeteer";
 
 const id = "2017125015";
-const pw = "recharge2!";
+const pw = "recharge1!";
 let subjects = [];
 let subject_count = 0;
 
@@ -67,11 +67,13 @@ const Crawler = async () => {
   await page.keyboard.press("Enter");
   //await page.click("img[src='/images/login/memberlogin_btn03.jpg']");
   await page.waitFor(1000);
-  await page.goto("https://portal.kau.ac.kr/sugang/GradHakList_2018.jsp");
+  await page.goto("https://portal.kau.ac.kr/sugang/GradHakList_2018.jsp", {
+    waitUntil: "networkidle2",
+  });
   console.log("grade page check");
   try {
     // 과목명 리스트 검사 후, 최초에만 리스트 반환
-    if (subjects.length === 0) {
+    if (subjects == 0) {
       await getSubjectList(page);
     }
     await getSubjectGrade(page);
