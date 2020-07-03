@@ -33,7 +33,7 @@ const checkGradeChange = () => {
 init();
 checkGradeChange();
 
-app.get("/", (req, res) => {
+app.get("/api/grade", (req, res) => {
   console.log(subject);
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
