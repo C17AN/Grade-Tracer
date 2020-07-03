@@ -2,7 +2,7 @@ const express = require("express");
 const { crawler } = require("./src/Crawler");
 const app = express();
 
-const port = process.env.PORT || 8080;
+const port = 5000;
 
 let subject = [];
 const init = async () => {
@@ -33,7 +33,7 @@ const checkGradeChange = () => {
 init();
 checkGradeChange();
 
-app.get("/home", (req, res) => {
+app.get("/grade", (req, res) => {
   console.log(subject);
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
