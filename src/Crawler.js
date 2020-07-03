@@ -57,6 +57,7 @@ const Crawler = async () => {
     "https://www.kau.ac.kr/page/login.jsp?ppage=&target_page=act_Portal_Check.jsp@chk1-1",
     { waitUntil: "networkidle2" }
   );
+  console.log("login page check");
   await page.type("input[name='p_id']", id);
   await page.waitFor(500);
   await page.type("input[name='p_pwd']", pw);
@@ -67,6 +68,7 @@ const Crawler = async () => {
   await page.goto("https://portal.kau.ac.kr/sugang/GradHakList_2018.jsp", {
     waitUntil: "networkidle2",
   });
+  console.log("grade page check");
   try {
     // 과목명 리스트 검사 후, 최초에만 리스트 반환
     if (subjects.length === 0) {
