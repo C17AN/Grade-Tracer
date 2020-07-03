@@ -2,6 +2,8 @@ const express = require("express");
 const { crawler } = require("./src/Crawler");
 const app = express();
 
+const port = process.env.PORT || 5000;
+
 let subject = [];
 const init = async () => {
   crawler().then((data) => {
@@ -35,4 +37,4 @@ app.get("/", (req, res) => {
   console.log(subject);
   res.send(subject);
 });
-app.listen(5000, () => console.log("server running"));
+app.listen(port, () => console.log("server running"));

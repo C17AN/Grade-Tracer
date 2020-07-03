@@ -45,7 +45,8 @@ class App extends Component {
 
   fetchData() {
     console.log("데이터 갱신");
-    fetch("http://localhost:5000/")
+    fetch("https://kau-grade-checker.herokuapp.com/")
+      //fetch("http://localhost:5000/")
       .then((res) => {
         console.log(res);
         return res.json();
