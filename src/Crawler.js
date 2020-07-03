@@ -69,7 +69,7 @@ const Crawler = async () => {
   });
   try {
     // 과목명 리스트 검사 후, 최초에만 리스트 반환
-    if (subjects == 0) {
+    if (subjects.length === 0) {
       await getSubjectList(page);
     }
     await getSubjectGrade(page);
