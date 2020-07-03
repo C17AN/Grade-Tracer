@@ -2,7 +2,7 @@ const express = require("express");
 const { crawler } = require("./src/Crawler");
 const app = express();
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8080;
 
 let subject = [];
 const init = async () => {
