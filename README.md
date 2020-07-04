@@ -31,3 +31,7 @@
 
 - 실행 시 `git clone https://github.com/C17AN/Grade-Tracer` 로 저장소 클론 후, `npm i` 명령으로 의존성 설치.
 - 이후 `npm run dev` 로 로컬 환경에서 테스트 가능.
+
+---
+
+## 07/04 22:22 헤로쿠 배포 성공
