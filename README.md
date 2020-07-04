@@ -35,3 +35,5 @@
 ---
 
 ## 07/04 22:22 헤로쿠 배포 성공
+
+[**Link!**](https://kau-grade-checker.herokuapp.com/)
