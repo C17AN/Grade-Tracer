@@ -71,7 +71,7 @@ const Crawler = async () => {
   await page.waitFor(500);
   await page.keyboard.press("Enter");
   //await page.click("img[src='/images/login/memberlogin_btn03.jpg']");
-  await page.waitFor(3000);
+  await page.waitFor(5000);
   page.waitForNavigation();
   await page.goto("https://portal.kau.ac.kr/sugang/GradHakList_2018.jsp", {
     waitUntil: "networkidle2",
