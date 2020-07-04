@@ -60,6 +60,7 @@ const Crawler = async () => {
   await page.setUserAgent(
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3419.0 Safari/537.36"
   );
+  page.waitForNavigation();
   await page.goto(
     "https://www.kau.ac.kr/page/login.jsp?ppage=&target_page=act_Portal_Check.jsp@chk1-1",
     { waitUntil: "networkidle2" }
@@ -70,7 +71,7 @@ const Crawler = async () => {
   await page.waitFor(500);
   await page.keyboard.press("Enter");
   //await page.click("img[src='/images/login/memberlogin_btn03.jpg']");
-  await page.waitFor(1000);
+  await page.waitFor(5000);
   page.waitForNavigation();
   await page.goto("https://portal.kau.ac.kr/sugang/GradHakList_2018.jsp", {
     waitUntil: "networkidle2",
