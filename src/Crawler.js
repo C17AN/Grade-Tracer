@@ -50,7 +50,12 @@ const Crawler = async () => {
   console.log("puppeteer launch check");
   const browser = await puppeteer.launch({
     headless: true,
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    args: [
+      "--no-sandbox",
+      "--headless",
+      "--disable-gpu",
+      "--window-size=1920x1080",
+    ],
   });
   const page = await browser.newPage();
   console.log("page open check");
@@ -85,6 +90,7 @@ const Crawler = async () => {
       resolve(subjects);
     });
   } catch (err) {
+    await browser.close();
     console.log(err);
   }
 };
