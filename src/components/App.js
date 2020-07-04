@@ -57,7 +57,8 @@ class App extends Component {
   componentDidMount() {
     // setInterval 함수의 콜백이 "최초 1회 실행된 후"
     // 주기적으로 실행되기 위한 코드
-    setInterval(this.fetchData(), 15000);
+    // 1분마다 fetch 수행
+    setInterval(this.fetchData(), 60000);
   }
 
   componentDidUpdate() {}

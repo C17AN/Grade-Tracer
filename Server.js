@@ -27,7 +27,7 @@ const checkGradeChange = () => {
         }
       }
     });
-  }, 15000);
+  }, 60000);
 };
 
 init();
