@@ -2,7 +2,7 @@ import React from "react";
 import "./Subject.css";
 
 const Subject = ({ name, grade }) => {
-  if (grade == 0) {
+  if (grade === "") {
     grade = "-";
   }
   return (
