@@ -23,6 +23,7 @@ const getSubjectList = async (page) => {
       subject_count += 1;
       index += 1;
     } catch (err) {
+      console.log(err);
       return;
     }
   }
@@ -41,6 +42,7 @@ const getSubjectGrade = async (page) => {
       }, subject_grade);
       subjects[i] = { ...subjects[i], grade };
     } catch (err) {
+      console.log(err);
       return;
     }
   }
